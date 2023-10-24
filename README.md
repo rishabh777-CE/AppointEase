@@ -28,7 +28,7 @@ Appointease is a web application designed to streamline and simplify appointment
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/jaig10/Appointease.git
+git clone https://github.com/rishabh777-CE/Appointease.git
 ```
 
 2. Change to the project directory:
