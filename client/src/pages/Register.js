@@ -30,15 +30,40 @@ function Register() {
     <div className="authentication">
       <div className="authentication-form card p-3">
         <h1 className="card-title">Nice To Meet U</h1>
-        <Form layout="vertical" onFinish={onFinish}>
-          <Form.Item label="Name" name="name">
-            <Input placeholder="Name" />
+        <Form layout="vertical" onFinish={onFinish} autoComplete="off">
+          <Form.Item label="Name" name="name"
+          rules={[ 
+            {
+              required: true,
+              message: "Please input your name!",
+            },
+          ]}>
+            <Input placeholder="Name" autoComplete="off" className="no-auto-capitalize" />
           </Form.Item>
-          <Form.Item label="Email" name="email">
-            <Input placeholder="Email" />
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+              {
+                type: "email",
+                message: "The input is not valid E-mail!",
+              },
+              {
+                required: true,
+                message: "Please input your E-mail!",
+              },
+            ]}
+          >
+            <Input placeholder="Email" autoComplete="off" className="no-auto-capitalize" />
           </Form.Item>
-          <Form.Item label="Password" name="password">
-            <Input placeholder="Password" type="password" />
+          <Form.Item label="Password" name="password"
+          rules={[
+            {
+              required: true,
+              message: "Please input your password!",
+            },
+          ]}>
+            <Input placeholder="Password" type="password" autoComplete="off" className="no-auto-capitalize" />
           </Form.Item>
 
           <Button
